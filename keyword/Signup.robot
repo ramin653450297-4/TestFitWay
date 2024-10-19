@@ -1,12 +1,11 @@
 *** Keywords ***
-When user signup to Fit Way platform with ${firstName}, ${lastName}, ${email}, ${phoneNumber}, ${password}, and ${confirmPassword}
+When user signup to Fit Way platform with ${firstName}, ${lastName}, ${email}, ${phoneNumber}, and ${password}
     Click Signup Button
     Input Name    ${firstName}
     Input Lastname    ${lastName}
     Input Email    ${email}
     Input Phone    ${phoneNumber}
     Input Password    ${password}
-    Input Confirm Password    ${confirmPassword}
     Submit Signup Form
 
 Click Signup Button
@@ -35,16 +34,12 @@ Input Password
     Should Match Regexp    ${password}    (?=.*[a-z])(?=.*[A-Z])(?=.*\d)[A-Za-z\d]{8,}
     Input Text    xpath=//input[@placeholder='รหัสผ่าน']    ${password}
 
-Input Confirm Password
-    [Arguments]    ${confirmPassword}
-    Input Text    xpath=//input[@placeholder='ยืนยันรหัสผ่าน']    ${confirmPassword}
-
 Submit Signup Form
     [Documentation]    กดปุ่มเพื่อส่งแบบฟอร์มสมัครสมาชิก
     Wait Until Element Is Visible    xpath=//button[text()='สมัครสมาชิก']    5s
     Click Button    xpath=//button[text()='สมัครสมาชิก']
 
 Verify Signup Success
-    [Documentation]    ตรวจสอบหน้าที่แสดงข้อความสมัครสมาชิกเสร็จสิ้น กรุณาเข้าสู่ระบบ
-    Wait Until Page Contains    สมัครสมาชิกเสร็จสิ้น กรุณาเข้าสู่ระบบ    10s
-    Page Should Contain         สมัครสมาชิกเสร็จสิ้น กรุณาเข้าสู่ระบบ
+    [Documentation]    ตรวจสอบหน้าที่แสดงข้อความสมัครสมาชิกเสร็จสิ้น 
+    Wait Until Page Contains    สมัครสมาชิกเสร็จสิ้น    10s
+    Page Should Contain         สมัครสมาชิกเสร็จสิ้น 

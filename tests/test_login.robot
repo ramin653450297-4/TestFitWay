@@ -10,7 +10,7 @@ Suite Teardown  Close Browser
 *** Test Cases ***
 As a user, I want to login successfully with valid data
     When user login to Fit Way platform with  ${signup_email}, ${signup_password}
-    Then Fit Way should display OTP page with message as "ยินดีต้อนรับเข้าสู่ระบบ"
+    Then Fit Way should display message as "ยินดีต้อนรับเข้าสู่ระบบ"
 
 As a user, I fail to login with invalid email
     When user login to Fit Way platform with  ${invalid_email}, ${signup_password}

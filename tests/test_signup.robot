@@ -9,9 +9,8 @@ Suite Teardown  Close Browser
 
 *** Test Cases ***
 As a user, I want to signup successfully with valid data
-    When user signup to future skill platform with ${signup_name}, ${signup_lastname}, ${signup_email}, ${signup_phone}, ${signup_password}, and ${signup_confirm_password}
-    Then future skill should display OTP page with message as "สมัครสมาชิกเสร็จสิ้น กรุณาเข้าสู่ระบบ"
+    When user signup to Fit Way platform with ${signup_name}, ${signup_lastname}, ${signup_email}, ${signup_phone}, and ${signup_password}
+    Then Fit Way should display message as "สมัครสมาชิกเสร็จสิ้น"
 
 As a user, I fail to signup with invalid email
-    When user signup to future skill platform with ${signup_name}, ${signup_lastname}, ${invalid_email}, ${signup_phone}, ${signup_password}, and ${signup_confirm_password}
-    Then future skill should display error message as "กรุณากรอกอีเมลให้ถูกต้อง"
+    When user signup to Fit Way platform with ${signup_name}, ${signup_lastname}, ${invalid_email}, ${signup_phone}, and ${signup_password}

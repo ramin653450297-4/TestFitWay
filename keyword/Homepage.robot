@@ -2,7 +2,7 @@
 Library    SeleniumLibrary
 
 *** Variables ***
-${SIGNUP_SUCCESS_MESSAGE}    สมัครสมาชิกเสร็จสิ้น กรุณาเข้าสู่ระบบ
+${SIGNUP_SUCCESS_MESSAGE}    สมัครสมาชิกเสร็จสิ้น 
 ${LOGIN_SUCCESS_MESSAGE}     ยินดีต้อนรับเข้าสู่ระบบ
 
 *** Keywords ***
